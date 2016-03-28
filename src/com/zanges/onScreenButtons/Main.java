@@ -7,7 +7,6 @@ import com.zanges.onScreenButtons.template.BLessWindow;
  */
 public class Main {
     public static void main(String[] args){
-        BLessWindow w1 = new BLessWindow("test", 100, 100);
-        w1.getFrame().setName("123");
+
     }
 }

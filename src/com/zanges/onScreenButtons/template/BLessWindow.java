@@ -1,18 +1,24 @@
 package com.zanges.onScreenButtons.template;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by Zanges on 29.03.2016.
  */
 public class BLessWindow {
 
-    JFrame frame = new JFrame();
+    private JFrame frame = new JFrame();
+    private Label label = new Label();
 
-    public BLessWindow(String label, int w, int h) {
+    public BLessWindow(String name, int w, int h) {
         frame.setUndecorated(true);
-        frame.setName(label);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setName(name);
         frame.setSize(w, h);
+        label.setName(name);
+        label.setText(name);
+        frame.getContentPane().add(label);
         frame.setVisible(true);
     }
 
@@ -20,4 +26,13 @@ public class BLessWindow {
         return this.frame;
     }
 
+    public Label getLabel() {
+        return this.label;
+    }
+
+    public void rename(String name){
+        this.label.setText(name);
+        this.label.setName(name);
+        this.frame.setName(name);
+    }
 }
