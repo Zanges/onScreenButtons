@@ -13,6 +13,7 @@ public class BLessWindow {
         frame.setUndecorated(true);
         frame.setName(label);
         frame.setSize(w, h);
+        frame.setVisible(true);
     }
 
     public JFrame getFrame() {
